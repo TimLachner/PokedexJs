@@ -1,0 +1,107 @@
+body {
+  background-color: darkgreen;
+  color: white;
+  margin: 0;
+  font-family: rubik;
+}
+
+.container {
+  padding: 40px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 54px;
+}
+
+#pokedex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+  padding-inline-start: 0;
+}
+
+.card {
+  list-style: none;
+  padding: 40px;
+  background-color: #f4f4f4;
+  color: #222;
+  text-align: center;
+  transform-style: preserve-3d;
+}
+
+.card-title {
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  font-size: 32px;
+  font-weight: normal;
+}
+.card-subtitle {
+  margin-top: 5px;
+  color: #666;
+  font-weight: lighter;
+}
+
+.card-image {
+  height: 180px;
+}
+
+.suche {
+  position: absolute;
+  top: 130px;
+  height: 1000px;
+  left: 1700px;
+  transform: translate(-50%, -50%);
+  background: #2f3640;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.such-btn {
+  position: absolute;
+  right: 5px;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.such-text {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 240px;
+}
+
+.footer {
+  font-size: medium;
+  font-weight: lighter;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+  transition: transform 1.5s;
+}
+
+.cardb {
+  list-style: none;
+  padding: 40px;
+  background-color: #f4f4f4;
+  color: #222;
+  text-align: center;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
