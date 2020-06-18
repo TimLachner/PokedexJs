@@ -1,8 +1,8 @@
 const pokedex = document.getElementById("pokedex");
-
+let suche = document.getElementById("sucht");
 const fetchPokemon = () => {
   const promises = [];
-  for (let i = 1; i <= 800; i++) {
+  for (let i = 1; i <= 100; i++) {
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
     promises.push(fetch(url).then((res) => res.json()));
   }
@@ -33,3 +33,8 @@ const displayPokemon = (pokemon) => {
   pokedex.innerHTML = pokemonHTMLString;
 };
 fetchPokemon();
+
+sucht.addEventListener("keydown", (e) => {
+  if (!e.repeat) console.log(`Key "${e.key}" pressed  [event: keydown]`);
+  else console.log(`Key "${e.key}" repeating  [event: keydown]`);
+});
