@@ -1,5 +1,5 @@
 const pokedex = document.getElementById("pokedex");
-let suche = document.getElementById("sucht");
+let sucht = document.getElementById("sucht");
 const fetchPokemon = () => {
   const promises = [];
   for (let i = 1; i <= 100; i++) {
