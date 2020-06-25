@@ -1,5 +1,4 @@
 const pokedex = document.getElementById("pokedex");
-let sucht = document.getElementById("sucht");
 const fetchPokemon = () => {
   const promises = [];
   for (let i = 1; i <= 100; i++) {
@@ -34,7 +33,11 @@ const displayPokemon = (pokemon) => {
 };
 fetchPokemon();
 
-sucht.addEventListener("keydown", (e) => {
-  if (!e.repeat) console.log(`Key "${e.key}" pressed  [event: keydown]`);
-  else console.log(`Key "${e.key}" repeating  [event: keydown]`);
-});
+var el = document.getElementById("test");
+console.log(el);
+el.addEventListener("input", logkey);
+
+function logkey(e) {
+  var input = document.getElementById("test").value;
+  console.log(input);
+}
