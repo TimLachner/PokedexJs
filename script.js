@@ -23,7 +23,7 @@ const displayPokemon = (pokemon) => {
       (pokemon) => `
         <li class="card">
             <img class="card-image" src="${pokemon.image}"/>
-            <h2 class="card-title">${pokemon.id}. ${pokemon.name}</h2>
+            <h2 class="card-title"><span>${pokemon.id}.</span> <span class="poke-name">${pokemon.name}</span></h2>
             <p class="card-subtitle">Type: ${pokemon.type}</p>
 
         </li>
@@ -41,4 +41,27 @@ el.addEventListener("input", logkey);
 function logkey(e) {
   var input = document.getElementById("suchtext").value;
   console.log(input);
+  mySearchFunction();
+}
+
+function mySearchFunction() {
+  var input, filter, ul, li, item, i, txtValue;
+  input = document.getElementById("suchtext");
+  filter = input.value.toUpperCase();
+  container = document.getElementsByClassName("poke-name");
+
+  console.log(ul);
+
+  for (i = 0; i < 1; i++) {
+    pokeName = container[i];
+    console.log(pokeName.textContent);
+    /*
+    txtValue = item.textContent || item.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+    */
+  }
 }
