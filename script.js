@@ -21,9 +21,9 @@ const displayPokemon = (pokemon) => {
   const pokemonHTMLString = pokemon
     .map(
       (pokemon) => `
-        <li class="card">
+        <li class="card" data-card-id="${pokemon.id}">
             <img class="card-image" src="${pokemon.image}"/>
-            <h2 class="card-title"><span>${pokemon.id}.</span> <span class="poke-name">${pokemon.name}</span></h2>
+            <h2 class="card-title"><span>${pokemon.id}.</span> <span class="poke-name" data-id="${pokemon.id}">${pokemon.name}</span></h2>
             <p class="card-subtitle">Type: ${pokemon.type}</p>
 
         </li>
@@ -50,11 +50,20 @@ function mySearchFunction() {
   filter = input.value.toUpperCase();
   container = document.getElementsByClassName("poke-name");
 
-  console.log(ul);
-
   for (i = 0; i < 1; i++) {
     pokeName = container[i];
     console.log(pokeName.textContent);
+    console.log(pokeName.getAttribute("data-id"));
+    console.log(
+      document.querySelector(
+        "[data-card-id='" + pokeName.getAttribute("data-id") + "']"
+      )
+    );
+
+    document.querySelector(
+      "[data-card-id='" + pokeName.getAttribute("data-id") + "']"
+    ).style.display = "none";
+
     /*
     txtValue = item.textContent || item.innerText;
     if (txtValue.toUpperCase().indexOf(filter) > -1) {
