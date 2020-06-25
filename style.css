@@ -29,6 +29,7 @@ h1 {
   background-color: #f4f4f4;
   color: #222;
   text-align: center;
+  backface-visibility: hidden;
 }
 
 .card-title {
@@ -100,6 +101,7 @@ h1 {
 }
 
 .btn {
+  position: relative;
   display: block;
   color: black;
   font-family: rubik;
