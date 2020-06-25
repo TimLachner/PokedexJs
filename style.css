@@ -29,7 +29,6 @@ h1 {
   background-color: #f4f4f4;
   color: #222;
   text-align: center;
-  backface-visibility: hidden;
 }
 
 .card-title {
@@ -48,11 +47,11 @@ h1 {
   height: 180px;
 }
 
-/*.card:hover {
+.card:hover {
   transform: rotateY(180deg);
   transform-style: preserve-3d;
   transition: transform 3s;
-}*/
+}
 
 .cardb {
   list-style: none;
@@ -98,4 +97,11 @@ h1 {
   transition: 0.4s;
   line-height: 40px;
   width: 240px;
+}
+
+.btn {
+  display: block;
+  color: black;
+  font-family: rubik;
+  display: flex;
 }
