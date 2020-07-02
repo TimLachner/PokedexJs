@@ -71,7 +71,7 @@ function mySearchFunction() {
     card = card[0];
     card.style.display = "none";
     txtValue = title.innerText;
-    ç;
+    console.log("---------------");
     console.log(txtValue);
     console.log(filter);
     console.log(txtValue.indexOf(filter.toLowerCase()));
@@ -83,15 +83,15 @@ function mySearchFunction() {
   }
 }
 
-var elements = document.getElementsByClassName("li");
+var elements = document.getElementsByClassName("card");
 console.log(elements);
+
 for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener("click", flip);
+  elements[i].addEventListener("click", flip, false);
 }
 
 function flip() {
   console.log("---------------");
   console.log("Click");
   console.log("---------------");
-  evl.style.display = "none";
 }
