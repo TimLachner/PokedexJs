@@ -1,7 +1,7 @@
 const pokedex = document.getElementById("pokedex");
 const fetchPokemon = () => {
   const promises = [];
-  for (let i = 1; i <= 100; i++) {
+  for (let i = 1; i <= 300; i++) {
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
     promises.push(fetch(url).then((res) => res.json()));
   }
@@ -47,29 +47,49 @@ function logkey(e) {
 function mySearchFunction() {
   var input, filter, ul, li, item, i, txtValue;
   input = document.getElementById("suchtext");
-  filter = input.value.toUpperCase();
+  filter = input.value;
   container = document.getElementsByClassName("poke-name");
 
-  for (i = 0; i < 1; i++) {
+  for (i = 0; i < container.length; i++) {
     pokeName = container[i];
     console.log(pokeName.textContent);
     console.log(pokeName.getAttribute("data-id"));
     console.log(
       document.querySelector(
-        "[data-card-id='" + pokeName.getAttribute("data-id") + "']"
+        "[data-card-id='" + pokeName.getAttribute("data-id") + "']  .poke-name"
       )
     );
 
-    document.querySelector(
+    var title = document.querySelectorAll(
+      "[data-card-id='" + pokeName.getAttribute("data-id") + "'] .poke-name"
+    );
+    var card = document.querySelectorAll(
       "[data-card-id='" + pokeName.getAttribute("data-id") + "']"
-    ).style.display = "none";
+    );
 
-
-    txtValue = item.textContent || item.innerText;
-    if (txtValue.toUpperCase().indexOf(input) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
+    title = title[0];
+    card = card[0];
+    card.style.display = "none";
+    txtValue = title.innerText;
+    console.log("---------------");
+    console.log(txtValue);
+    console.log(filter);
+    console.log(txtValue.indexOf(filter.toLowerCase()));
+    console.log("---------------");
+    if (txtValue.indexOf(filter.toLowerCase()) > -1) {
+      card.style.display = "block";
+      console.log("show");
     }
   }
+}
+
+var elc = document.getElementById("card");
+console.log(elc);
+elc.addEventListener("click", flip);
+
+function flip(e) {
+  console.log("---------------");
+  console.log("Click");
+  console.log("---------------");
+  elc.style.display = "none";
 }
