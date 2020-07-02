@@ -64,13 +64,12 @@ function mySearchFunction() {
       "[data-card-id='" + pokeName.getAttribute("data-id") + "']"
     ).style.display = "none";
 
-    /*
+
     txtValue = item.textContent || item.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    if (txtValue.toUpperCase().indexOf(input) > -1) {
       li[i].style.display = "";
     } else {
       li[i].style.display = "none";
     }
-    */
   }
 }
