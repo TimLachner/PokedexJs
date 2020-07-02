@@ -21,7 +21,7 @@ const displayPokemon = (pokemon) => {
   const pokemonHTMLString = pokemon
     .map(
       (pokemon) => `
-        <li class="card" data-card-id="${pokemon.id}">
+        <li  id="c" class="card" data-card-id="${pokemon.id}">
             <img class="card-image" src="${pokemon.image}"/>
             <h2 class="card-title"><span>${pokemon.id}.</span> <span class="poke-name" data-id="${pokemon.id}">${pokemon.name}</span></h2>
             <p class="card-subtitle">Type: ${pokemon.type}</p>
@@ -81,15 +81,4 @@ function mySearchFunction() {
       console.log("show");
     }
   }
-}
-
-var elc = document.getElementById("card");
-console.log(elc);
-elc.addEventListener("click", flip);
-
-function flip(e) {
-  console.log("---------------");
-  console.log("Click");
-  console.log("---------------");
-  elc.style.display = "none";
 }
