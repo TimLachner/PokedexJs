@@ -121,7 +121,7 @@ h1 {
 }
 
 .topBtn:hover {
-  background-color: #3d3d3d;
+  background-color: #add8f7;
 }
 
 /*FOOTER*/
@@ -134,5 +134,4 @@ h1 {
   height: 200px;
   background-color: #2f3640;
   color: white;
-  text-align: center;
 }

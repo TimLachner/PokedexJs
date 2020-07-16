@@ -33,6 +33,11 @@ const displayPokemon = (pokemon) => {
     )
     .join("");
   pokedex.innerHTML = pokemonHTMLString;
+  cards = document.getElementsByClassName("card");
+  console.log(cards);
+  for (i = 1; i <= 100; i++) {
+    cards.addEventListener("click", weiterleitung);
+  }
 };
 fetchPokemon();
 
@@ -108,13 +113,16 @@ function topFunction() {
   document.documentElement.scrollTop = "0";
 }
 
-/*FLIP*/
+/*Details*/
 
-card = document.getElementById("container");
+card = document.getElementById("pokedex");
 cardback = document.getElementById("cb");
 
-card.addEventListener("click", flip);
+card.addEventListener("click", weiterleitung);
 
-function flip() {
+function weiterleitung() {
+  console.log("----------");
   console.log("CLICK");
+  console.log("----------");
+  window.location = "http://127.0.0.1:5500/details.html";
 }
