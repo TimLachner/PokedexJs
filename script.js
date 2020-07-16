@@ -1,3 +1,5 @@
+/*CONTAINER*/
+
 const pokedex = document.getElementById("pokedex");
 const fetchPokemon = () => {
   const promises = [];
@@ -33,6 +35,8 @@ const displayPokemon = (pokemon) => {
   pokedex.innerHTML = pokemonHTMLString;
 };
 fetchPokemon();
+
+/*SUCHE*/
 
 var el = document.getElementById("suchtext");
 console.log(el);
@@ -83,15 +87,35 @@ function mySearchFunction() {
   }
 }
 
-var elements = document.getElementsByClassName("card");
-console.log(elements);
+/*TOPBUTTON*/
 
-for (var i = 0; i < elements.length; i++) {
-  elements[i].addEventListener("click", flip, false);
+topButton = document.getElementById("topBtn");
+
+window.onscroll = function () {
+  scrollfunction();
+};
+
+function scrollfunction() {
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    topButton.style.display = "block";
+  } else {
+    topButton.style.display = "none";
+  }
 }
 
+function topFunction() {
+  document.body.scrollTop = "0";
+  document.documentElement.scrollTop = "0";
+}
+
+/*FLIP*/
+
+card = document.getElementById("container");
+cardback = document.getElementById("cardb");
+
+card.addEventListener("click", flip);
+
 function flip() {
-  console.log("---------------");
-  console.log("Click");
-  console.log("---------------");
+  card.style.display = "none";
+  cardback.style.display = "block";
 }

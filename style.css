@@ -1,5 +1,6 @@
+/*ALLGEMEIN*/
 body {
-  background-color: darkgreen;
+  background-color: darkgrey;
   color: white;
   margin: 0;
   font-family: rubik;
@@ -14,6 +15,7 @@ h1 {
   text-transform: uppercase;
   text-align: center;
   font-size: 54px;
+  color: #2f3640;
 }
 
 #pokedex {
@@ -23,6 +25,15 @@ h1 {
   padding-inline-start: 0;
 }
 
+.btn {
+  position: relative;
+  display: block;
+  color: black;
+  font-family: rubik;
+  display: flex;
+}
+
+/*CARD*/
 .card {
   list-style: none;
   padding: 40px;
@@ -47,13 +58,7 @@ h1 {
   height: 180px;
 }
 
-/*.card:active {
-  transform: rotateY(180deg);
-  transform-style: preserve-3d;
-  transition: transform 3s;
-}*/
-
-.card .back {
+/*.card-back {
   background: blue;
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -70,7 +75,9 @@ h1 {
   -moz-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
-}
+}*/
+
+/*SUCHE*/
 
 .suche {
   position: absolute;
@@ -110,10 +117,24 @@ h1 {
   width: 240px;
 }
 
-.btn {
-  position: relative;
-  display: block;
-  color: black;
-  font-family: rubik;
-  display: flex;
+/*TOPBUTTON*/
+
+.topBtn {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 3px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 80px;
+  font-size: 18px;
+}
+
+.topBtn:hover {
+  background-color: darkgrey;
 }
