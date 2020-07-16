@@ -58,24 +58,9 @@ h1 {
   height: 180px;
 }
 
-/*.card-back {
-  background: blue;
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  list-style: none;
-  padding: 40px;
-  background-color: #f4f4f4;
-  color: #222;
-  text-align: center;
+.card:hover {
+  background-color: #add8f7;
 }
-.card.flipped {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}*/
 
 /*SUCHE*/
 
@@ -123,7 +108,7 @@ h1 {
   display: none;
   position: fixed;
   bottom: 10px;
-  right: 3px;
+  right: 2px;
   z-index: 99;
   border: none;
   outline: none;
@@ -136,5 +121,18 @@ h1 {
 }
 
 .topBtn:hover {
-  background-color: darkgrey;
+  background-color: #3d3d3d;
+}
+
+/*FOOTER*/
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #2f3640;
+  color: white;
+  text-align: center;
 }

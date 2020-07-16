@@ -3,7 +3,7 @@
 const pokedex = document.getElementById("pokedex");
 const fetchPokemon = () => {
   const promises = [];
-  for (let i = 1; i <= 300; i++) {
+  for (let i = 1; i <= 100; i++) {
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
     promises.push(fetch(url).then((res) => res.json()));
   }
@@ -96,7 +96,7 @@ window.onscroll = function () {
 };
 
 function scrollfunction() {
-  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     topButton.style.display = "block";
   } else {
     topButton.style.display = "none";
@@ -111,11 +111,10 @@ function topFunction() {
 /*FLIP*/
 
 card = document.getElementById("container");
-cardback = document.getElementById("cardb");
+cardback = document.getElementById("cb");
 
 card.addEventListener("click", flip);
 
 function flip() {
-  card.style.display = "none";
-  cardback.style.display = "block";
+  console.log("CLICK");
 }
