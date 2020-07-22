@@ -24,20 +24,22 @@ const displayPokemon = (pokemon) => {
     .map(
       (pokemon) => `
         <li  id="c" class="card" data-card-id="${pokemon.id}">
+        <a class="poke-link" href="./details.php?id=${pokemon.id}">
             <img class="card-image" src="${pokemon.image}"/>
             <h2 class="card-title"><span>${pokemon.id}.</span> <span class="poke-name" data-id="${pokemon.id}">${pokemon.name}</span></h2>
             <p class="card-subtitle">Type: ${pokemon.type}</p>
-
+        </a>
         </li>
     `
     )
     .join("");
   pokedex.innerHTML = pokemonHTMLString;
+  /*
   cards = document.getElementsByClassName("card");
   console.log(cards);
-  for (i = 1; i <= 100; i++) {
-    cards.addEventListener("click", weiterleitung);
-  }
+  for (i = 0; i <= cards.length; i++) {
+    cards[i].addEventListener("click", weiterleitung);
+  }*/
 };
 fetchPokemon();
 
@@ -113,16 +115,17 @@ function topFunction() {
   document.documentElement.scrollTop = "0";
 }
 
-/*Details*/
+/*Details
 
 card = document.getElementById("pokedex");
 cardback = document.getElementById("cb");
 
-card.addEventListener("click", weiterleitung);
-
+card.addEventListener("click", weiterleitung);*/
+/*
 function weiterleitung() {
   console.log("----------");
   console.log("CLICK");
   console.log("----------");
-  window.location = "http://127.0.0.1:5500/details.html";
+  window.location = "http://127.0.0.1:8888/details.php";
 }
+*/
